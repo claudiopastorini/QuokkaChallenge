@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "it.scripto.quokkachallenge"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    // Google support Libraries
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+
+    // Retrofit: A type-safe HTTP client for Android and Java
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+
+    // Picasso: A powerful image downloading and caching library for Android
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // gson: A Java serialization library that can convert Java Objects into JSON and back.
+    compile 'com.google.code.gson:gson:2.4'
+
+    // ButterKnife: Field and method binding for Android views
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    // FoldableLayout: Android widgets to implement folding animation.
+    compile 'com.alexvasilkov:foldable-layout:1.1.0'
+
+    // Material-ish Progress: A material style progress wheel compatible with 2.3
+    compile 'com.pnikosis:materialish-progress:1.7'
+}
